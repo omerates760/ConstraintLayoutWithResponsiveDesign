@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/editTextName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_person_pin_24" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@+id/editTextSurname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <EditText
+        android:id="@+id/editTextSurname"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Surname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editTextName"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <EditText
+        android:id="@+id/editTextDay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Day"
+        app:layout_constraintEnd_toStartOf="@+id/editTextMonth"
+        app:layout_constraintStart_toStartOf="@id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+
+    <EditText
+        android:id="@+id/editTextMonth"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Month"
+        app:layout_constraintEnd_toStartOf="@+id/editTextYear"
+        app:layout_constraintStart_toEndOf="@+id/editTextDay"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+
+    <EditText
+        android:id="@+id/editTextYear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Year"
+        app:layout_constraintEnd_toEndOf="@id/editTextSurname"
+        app:layout_constraintStart_toEndOf="@id/editTextMonth"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSurname" />
+    <RadioButton
+        android:id="@+id/radioBtnOne"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="One"
+        app:layout_constraintEnd_toStartOf="@+id/radioBtnTwo"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@id/editTextDay" />
+
+    <RadioButton
+        android:id="@+id/radioBtnTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="Two"
+        app:layout_constraintEnd_toStartOf="@+id/radioBtnThree"
+        app:layout_constraintStart_toEndOf="@id/radioBtnOne"
+        app:layout_constraintTop_toBottomOf="@id/editTextYear" />
+
+
+    <RadioButton
+        android:id="@+id/radioBtnThree"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="Three"
+        app:layout_constraintEnd_toStartOf="@+id/radioBtnFour"
+        app:layout_constraintStart_toEndOf="@id/radioBtnTwo"
+        app:layout_constraintTop_toBottomOf="@id/editTextYear" />
+
+    <RadioButton
+        android:id="@+id/radioBtnFive"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="Five"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSurname"
+        app:layout_constraintStart_toEndOf="@id/radioBtnFour"
+        app:layout_constraintTop_toBottomOf="@+id/editTextYear" />
+
+    <RadioButton
+        android:id="@+id/radioBtnFour"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="Four"
+        app:layout_constraintEnd_toStartOf="@+id/radioBtnFive"
+        app:layout_constraintStart_toEndOf="@id/radioBtnThree"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMonth" />
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.2"
+        android:background="#FFC107"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSurname"
+        app:layout_constraintStart_toStartOf="@+id/editTextName"
+        app:layout_constraintTop_toBottomOf="@+id/radioBtnThree"/>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintWidth_percent="0.5"
+        android:text="This is a info title"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toStartOf="@+id/txtDate"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@id/view3"
+         />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintWidth_percent="0.3"
+        android:text="27.12.2020"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toEndOf="@id/txtTitle"
+        app:layout_constraintTop_toTopOf="@id/view3"
+         />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/txtDate"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <Button
+        android:id="@+id/btnGo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.2"
+        android:text="Go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <Button
+        android:id="@+id/btnWait"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="WAİT"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintBottom_toTopOf="@id/btnStop"
+        app:layout_constraintTop_toTopOf="@id/btnGo" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.5"
+        android:text="STOP"
+        app:layout_constraintBottom_toBottomOf="@id/btnGo"
+        app:layout_constraintStart_toStartOf="@+id/btnWait"
+        app:layout_constraintTop_toBottomOf="@id/btnWait" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
